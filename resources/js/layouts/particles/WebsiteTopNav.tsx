@@ -9,7 +9,7 @@ export default function WebsiteTopNav() {
             <div className="container mx-auto">
                 <div className="flex items-center justify-between pt-1">
                     <div className="logo">
-                        <h3 className="text-xl font-black text-white uppercase">quickbank</h3>
+                        <h3 className="text-xl font-black text-white uppercase"><Link href={route('home')}>quickbank</Link></h3>
                     </div>
                     <div className="flex items-center gap-3 text-white uppercase">
                         <Link href={route('home')}>Home</Link>

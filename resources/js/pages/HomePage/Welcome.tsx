@@ -1,7 +1,7 @@
-import WebsiteLayout from '@/layouts/settings/WebsiteLayout';
+import WebsiteLayout from '@/layouts/WebsiteLayout';
 import { Head } from '@inertiajs/react';
 import Hero from './Hero';
-import ShortIntro from './ShortIntro';
+import Features from './Features';
 
 export default function Welcome() {
     return (
@@ -9,7 +9,7 @@ export default function Welcome() {
             <WebsiteLayout>
                 <Head title="Home" />
                 <Hero />
-                <ShortIntro />
+                <Features/>
             </WebsiteLayout>
         </>
     );
