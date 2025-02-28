@@ -1,4 +1,4 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export default function Features() {
     const features = [
@@ -48,18 +48,16 @@ export default function Features() {
         <section className="py-20 select-none">
             <div className="container mx-auto">
                 <h6 className="text-center font-bold uppercase lg:text-xl">Custom Banking</h6>
-                <h3 className="py-2 text-center text-2xl font-bold uppercase lg:text-6xl">
-                    Banking For Your Needs
-                </h3>
+                <h3 className="py-2 text-center text-2xl font-bold uppercase lg:text-6xl">Banking For Your Needs</h3>
 
-                <div className="m-auto max-w-5xl relative">
+                <div className="relative m-auto max-w-5xl">
                     <Carousel className="relative">
                         <CarouselContent className="mt-10">
                             {features.map((item, index) => (
-                                <CarouselItem key={index} className="lg:basis-1/3">
-                                    <div className="text-center border p-3 rounded-xl select-none">
+                                <CarouselItem key={index} className="max-w-[80%] lg:basis-1/3">
+                                    <div className="rounded-xl border p-3 text-center select-none">
                                         <span className="text-7xl">{item.icon}</span>
-                                        <h5 className="text-xl font-bold uppercase py-2">{item.title}</h5>
+                                        <h5 className="py-2 text-xl font-bold uppercase">{item.title}</h5>
                                         <p>{item.description}</p>
                                     </div>
                                 </CarouselItem>
@@ -67,8 +65,11 @@ export default function Features() {
                         </CarouselContent>
 
                         {/* Add Arrow Buttons */}
-                        <CarouselPrevious className="" />
-                        <CarouselNext className="" />
+
+                        <div className='hidden last:block'>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </div>
                     </Carousel>
                 </div>
             </div>

@@ -10,7 +10,24 @@ export default function Hero() {
         >
             <div className="container mx-auto">
                 <motion.h1
-                    className="uppercase text-center font-black text-transparent bg-clip-text bg-cover text-6xl md:text-[220px]"
+                    className="lg:hidden uppercase text-center font-black text-transparent bg-clip-text bg-cover text-6xl md:text-[220px] mb-7"
+                    style={{
+                        backgroundImage: "url('/assets/images/textBg.jpg')",
+                    }}
+                    animate={{ fontSize: "80px" }}
+                    initial={{ fontSize: "20px" }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 25,
+                        duration: 5,
+                    }}
+                    exit="hidden"
+                >
+                    Quick Bank
+                </motion.h1>
+                <motion.h1
+                    className="hidden lg:block uppercase text-center font-black text-transparent bg-clip-text bg-cover text-6xl md:text-[220px]"
                     style={{
                         backgroundImage: "url('/assets/images/textBg.jpg')",
                     }}
@@ -33,7 +50,7 @@ export default function Hero() {
                     >
                         Apply For Loan
                     </Link>
-                    <p className="text-xl lg:text-2xl mt-4 max-w-[550px] m-auto">
+                    <p className="text-xl lg:text-2xl mt-4 max-w-[550px] m-auto text-white">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quos obcaecati ullam earum cumque recusandae harum culpa voluptatum? Quos, quas.
                     </p>
                 </div>
