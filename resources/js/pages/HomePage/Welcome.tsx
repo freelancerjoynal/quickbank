@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Features from './Features';
 import FixedDepositSection from './FixedDepositSection';
 import AwardsSection from './AwardsSection';
+import LoanCalculator from './LoanCalculator';
 
 export default function Welcome() {
     return (
@@ -14,6 +15,7 @@ export default function Welcome() {
                 <Features/>
                 <FixedDepositSection/>
                 <AwardsSection/>
+                <LoanCalculator/>
             </WebsiteLayout>
         </>
     );

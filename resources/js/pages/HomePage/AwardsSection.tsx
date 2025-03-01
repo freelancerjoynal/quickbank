@@ -37,7 +37,7 @@ const AwardsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-black text-gray-900">Awards & Major Achievements</h2>
+          <h2 className="text-4xl lg:text-6xl font-black text-gray-900">Awards & Major Achievements</h2>
           <p className="text-gray-600 mt-2 font-semibold">Outstanding performance and achievements.</p>
         </div>
 
