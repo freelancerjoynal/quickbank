@@ -3,6 +3,7 @@ import { Head } from '@inertiajs/react';
 import Hero from './Hero';
 import Features from './Features';
 import FixedDepositSection from './FixedDepositSection';
+import AwardsSection from './AwardsSection';
 
 export default function Welcome() {
     return (
@@ -12,6 +13,7 @@ export default function Welcome() {
                 <Hero />
                 <Features/>
                 <FixedDepositSection/>
+                <AwardsSection/>
             </WebsiteLayout>
         </>
     );
