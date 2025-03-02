@@ -20,6 +20,7 @@ export default function WebsiteTopNav() {
                     <div className="flex items-center gap-3 text-white uppercase">
                         <div className='gap-3 items-center hidden lg:flex'>
                             <Link href={route('home')}>Home</Link>
+                            <Link href={route('apply.loan')}>apply for laon</Link>
                             <Link href={route('about')}>About</Link>
                         </div>
 

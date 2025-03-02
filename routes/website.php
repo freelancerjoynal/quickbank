@@ -10,6 +10,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
-    return Inertia::render('AboutPage/About', [ ]);
+    return Inertia::render('AboutPage/AboutPage', [ ]);
 })->name('about');
+
+Route::get('/appy-for-loan', function () {
+    return Inertia::render('LoanPage/LoanPage', [ ]);
+})->name('apply.loan');
+
 
