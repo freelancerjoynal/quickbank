@@ -4,7 +4,7 @@ import Hero from './Hero';
 import Features from './Features';
 import FixedDepositSection from './FixedDepositSection';
 import AwardsSection from './AwardsSection';
-import LoanCalculator from './LoanCalculator';
+import LoanCalculator from '../../../components/LoanCalculator';
 import NewsBlogSection from '@/components/NewsBlogSection';
 
 export default function Welcome() {
