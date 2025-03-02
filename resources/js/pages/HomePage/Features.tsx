@@ -16,7 +16,7 @@ export default function Features() {
 
     return (
         <motion.section
-        className="py-20 select-none"
+        className="py-20 select-none hidden lg:block"
         {...fadeIn}
         >
             <div className="container mx-auto">

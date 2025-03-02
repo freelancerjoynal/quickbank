@@ -248,7 +248,7 @@ const LoanCalculator = () => {
             <div className="mt-8">
               <h2 className="text-lg font-medium text-gray-900 border-b pb-2 mb-4">Amortization Schedule</h2>
               <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
+                <table className="min-w-full divide-y divide-gray-200 ">
                   <thead className="bg-gray-50">
                     <tr>
                       <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
