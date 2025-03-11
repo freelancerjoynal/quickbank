@@ -5,7 +5,9 @@ import Features from './Features';
 import FixedDepositSection from './FixedDepositSection';
 import AwardsSection from './AwardsSection';
 import LoanCalculator from '../../../components/LoanCalculator';
+import BankingNeeds from '../../../components/BankingNeeds';
 import NewsBlogSection from '@/components/NewsBlogSection';
+
 
 export default function Welcome() {
     return (
@@ -17,6 +19,7 @@ export default function Welcome() {
                 <FixedDepositSection/>
                 <AwardsSection/>
                 <LoanCalculator/>
+                <BankingNeeds/>
                 <NewsBlogSection/>
             </WebsiteLayout>
         </>

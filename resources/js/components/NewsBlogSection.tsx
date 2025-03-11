@@ -123,7 +123,7 @@ const NewsBlogSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedPosts.map((post) => (
-          <div key={post.id} className="flex flex-col overflow-hidden bg-white">
+          <div key={post.id} className="flex flex-col overflow-hidden pb-6 bg-white rounded-lg shadow transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
             <div className="relative">
               <img
                 src={post.image}
@@ -141,10 +141,10 @@ const NewsBlogSection = () => {
               <span className="text-gray-400">•</span>
               <span className="text-gray-500">{post.date}</span>
             </div>
-            <h3 className="mt-3 text-lg font-semibold leading-tight hover:text-indigo-800 cursor-pointer">
+            <h3 className="mt-3 text-lg font-semibold leading-tight hover:text-indigo-800 cursor-pointe px-3">
               {post.title}
             </h3>
-            <div className="mt-auto pt-4 flex items-center text-gray-600">
+            <div className="mt-auto pt-4 flex items-center text-gray-600 px-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>

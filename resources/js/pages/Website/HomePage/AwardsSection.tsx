@@ -50,7 +50,7 @@ const AwardsSection = () => {
               key={index}
               {...fadeIn}
               transition={{duration: index * .6, delay: index * .2}}
-              className="bg-white p-6 rounded-lg shadow">
+              className="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-start mb-6">
                   <div className="mr-4 text-gray-500 text-4xl">
                     {award.icon}
@@ -92,7 +92,7 @@ const AwardsSection = () => {
               key={index}
               {...fadeIn}
               transition={{duration: index * .6, delay: index * .2}}
-              className="bg-white p-6 rounded-lg shadow">
+              className="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-start mb-6">
                   <div className="mr-4 text-gray-500 text-4xl">
                     {award.icon}
