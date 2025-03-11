@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
+import { fadeIn } from '@/lib/Animations';
 const NewsBlogSection = () => {
   // Array of blog posts
   const blogPosts = [
@@ -86,7 +87,10 @@ const NewsBlogSection = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <motion.div
+    {...fadeIn}
+
+    className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Latest News & Events</h2>
         <div className="flex space-x-2">
@@ -154,7 +158,7 @@ const NewsBlogSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

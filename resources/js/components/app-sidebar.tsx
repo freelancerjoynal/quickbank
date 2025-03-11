@@ -10,7 +10,12 @@ import AppLogo from './app-logo';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
-        url: '/dashboard',
+        url: route('dashboard') ,
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Blogs',
+        url: route('dashboard.blogs'),
         icon: LayoutGrid,
     },
 ];
