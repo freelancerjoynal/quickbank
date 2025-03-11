@@ -79,7 +79,7 @@ const AwardsSection = () => {
               <img
                 src="/assets/images/trophy.png"
                 alt="Trophy"
-                className="w-96 lg:w-lg h-auto object-contain"
+                className="w-96 lg:w-lg h-auto object-contain transform hover:-translate-y-1 transition-all duration-300"
               />
             </div>
           </div>
