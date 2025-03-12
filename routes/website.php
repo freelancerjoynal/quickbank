@@ -40,4 +40,4 @@ Route::get('/get-users', function () {
 
 
 
-Route::get('/profile/dashboard', [UserController::class, 'profileDashboard'])->name('profile.dashboard');
+Route::get('/my-account', [UserController::class, 'profileDashboard'])->name('my.account');

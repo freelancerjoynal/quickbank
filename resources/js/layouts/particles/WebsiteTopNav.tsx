@@ -29,7 +29,9 @@ export default function WebsiteTopNav() {
                                     dashboard
                                 </Link>
                             ) : (
-                                <p>others</p>
+                                <Link href={route('my.account')} className="bg-yellow-800 px-2">
+                                    My Account
+                                </Link>
                             )
                         ) : currentUrl === '/login' ? (
                             <Link href={route('register')} className="bg-yellow-800 px-2">
