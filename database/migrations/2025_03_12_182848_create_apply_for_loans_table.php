@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('apply_for_loans', function (Blueprint $table) {
             $table->id(); // Primary key auto-increment ID
+            // Relationship
+            $table->foreignId('user_id') // Foreign key linking to users table
+                  ->constrained() // Creates foreign key constraint
+                  ->onDelete('cascade'); // Deletes loan application when user is deleted
 
             // Personal Information
             $table->string('full_name'); // Applicant's full legal name
@@ -33,6 +37,8 @@ return new class extends Migration
             $table->string('loan_purpose'); // Intended purpose of the loan
             $table->integer('loan_term'); // Duration of loan in months
             $table->decimal('interest_rate', 5, 2)->default(0.0); // Annual interest rate percentage
+
+
 
             // Collateral Information
             $table->decimal('collateral_value', 15, 2)->nullable(); // Estimated value of collateral
