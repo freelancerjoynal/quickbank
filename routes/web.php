@@ -13,10 +13,7 @@ require __DIR__ . '/website.php';
 
 
 Route::middleware(['auth', 'verified', 'roleChecherGroup'])->group(function () {
-
-    Route::get('dashboard', [dashboardController::class, 'AdminDashboard'])->name('admin.dashboard');
-
-
+    Route::get('dashboard', [dashboardController::class, 'AdminDashboard'])->name('dashboard');
 });
 
 
