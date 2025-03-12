@@ -1,6 +1,14 @@
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { FaBars } from "react-icons/fa6";
+import { FaBars } from 'react-icons/fa6';
 
 export default function WebsiteTopNav() {
     const { auth } = usePage<SharedData>().props;
@@ -12,12 +20,12 @@ export default function WebsiteTopNav() {
             <div className="container mx-auto">
                 <div className="flex items-center justify-between pt-1">
                     <div className="logo">
-                        <h3 className="text-2xl font-black text-white uppercase pl-3">
+                        <h3 className="pl-3 text-2xl font-black text-white uppercase">
                             <Link href={route('home')}>quickbank</Link>
                         </h3>
                     </div>
                     <div className="flex items-center gap-3 text-white uppercase">
-                        <div className="gap-3 items-center hidden lg:flex">
+                        <div className="hidden items-center gap-3 lg:flex">
                             <Link href={route('home')}>Home</Link>
                             <Link href={route('website.apply.loan')}>apply for loan</Link>
                             <Link href={route('website.about')}>About</Link>
@@ -29,9 +37,19 @@ export default function WebsiteTopNav() {
                                     dashboard
                                 </Link>
                             ) : (
-                                <Link href={route('my.account')} className="bg-yellow-800 px-2">
-                                    My Account
-                                </Link>
+                                <a className="bg-yellow-800 px-2">
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger className='focus:outline-0 cursor-pointer'>My Account</DropdownMenuTrigger>
+                                        <DropdownMenuContent>
+                                            <DropdownMenuLabel><Link href={route('my.account')}>Dashboard</Link></DropdownMenuLabel>
+                                            <DropdownMenuSeparator />
+                                            <DropdownMenuItem>Profile</DropdownMenuItem>
+                                            <DropdownMenuItem>Billing</DropdownMenuItem>
+                                            <DropdownMenuItem>Team</DropdownMenuItem>
+                                            <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                </a>
                             )
                         ) : currentUrl === '/login' ? (
                             <Link href={route('register')} className="bg-yellow-800 px-2">
