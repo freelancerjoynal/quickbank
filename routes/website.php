@@ -12,17 +12,17 @@ Route::get('/', function () {
 // About Page Route
 Route::get('/about', function () {
     return Inertia::render('Website/AboutPage/AboutPage', []);
-})->name('about');
+})->name('website.about');
 
 // Loan Application Page Route
 Route::get('/apply-for-loan', function () {
     return Inertia::render('Website/LoanPage/LoanPage', []);
-})->name('apply.loan');
+})->name('website.apply.loan');
 
 // Users Page Route
 Route::get('/users', function () {
     return Inertia::render('Website/Users', []);
-})->name('users');
+})->name('website.users');
 
 // Fetch Users (via Inertia)
 Route::get('/get-users', function () {
@@ -32,4 +32,4 @@ Route::get('/get-users', function () {
     return Inertia::render('Website/Users', [
         'users' => $users,  // Pass users to the Inertia view
     ]);
-})->name('get.users');
+})->name('website.get.users');
