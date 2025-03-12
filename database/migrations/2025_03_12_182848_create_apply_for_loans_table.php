@@ -47,7 +47,7 @@ return new class extends Migration
             // Application Status
             $table->boolean('terms_agreed'); // Agreement to loan terms and conditions
             $table->string('status')->default('pending'); // Current application status
-            $table->string('coupon')->default('pending'); // Promotional or referral coupon code
+            $table->string('coupon')->nullable(); // Promotional or referral coupon code
 
             $table->string('referral_name')->nullable(); // Name of referrer
             $table->tinyInteger('referral_id')->nullable(); // ID of referrer
