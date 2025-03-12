@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\User;
@@ -33,3 +34,10 @@ Route::get('/get-users', function () {
         'users' => $users,  // Pass users to the Inertia view
     ]);
 })->name('website.get.users');
+
+
+
+
+
+
+Route::get('/profile/dashboard', [UserController::class, 'profileDashboard'])->name('profile.dashboard');

@@ -2,7 +2,6 @@ import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
 import { FaBars } from "react-icons/fa6";
 
-
 export default function WebsiteTopNav() {
     const { auth } = usePage<SharedData>().props;
 
@@ -18,16 +17,20 @@ export default function WebsiteTopNav() {
                         </h3>
                     </div>
                     <div className="flex items-center gap-3 text-white uppercase">
-                        <div className='gap-3 items-center hidden lg:flex'>
+                        <div className="gap-3 items-center hidden lg:flex">
                             <Link href={route('home')}>Home</Link>
-                            <Link href={route('website.apply.loan')}>apply for laon</Link>
+                            <Link href={route('website.apply.loan')}>apply for loan</Link>
                             <Link href={route('website.about')}>About</Link>
                         </div>
 
                         {auth.user ? (
-                            <Link href={route('admin.dashboard')} className="bg-yellow-800 px-2">
-                                dashboard
-                            </Link>
+                            auth.user.role === 1 || auth.user.role === 2 ? (
+                                <Link href={route('dashboard')} className="bg-yellow-800 px-2">
+                                    dashboard
+                                </Link>
+                            ) : (
+                                <p>others</p>
+                            )
                         ) : currentUrl === '/login' ? (
                             <Link href={route('register')} className="bg-yellow-800 px-2">
                                 Register
@@ -37,7 +40,7 @@ export default function WebsiteTopNav() {
                                 log in
                             </Link>
                         )}
-                        <FaBars className='mr-4 text-4xl lg:hidden' />
+                        <FaBars className="mr-4 text-4xl lg:hidden" />
                     </div>
                 </div>
             </div>

@@ -19,9 +19,14 @@ class RoleChecker
     public function handle(Request $request, Closure $next)
     {
         // Check if the authenticated user has role 1 or 2
-        if(auth()->user()->role !== 1 || auth()->user()->role !== 2){
+        if (auth()->user()->role === 0) {
+            return redirect()->route('profile.dashboard');
+
+        }elseif  (  auth()->user()->role !== 1 && auth()->user()->role !== 2 ){
+
             return redirect()->route('role.logout');
         }
+
 
         return $next($request);
     }
