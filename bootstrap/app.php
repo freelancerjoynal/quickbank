@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Middleware\HandleInertiaRequests;
-use App\Http\Middleware\roleChecker;
+use App\Http\Middleware\isAdmin;
+use App\Http\Middleware\isAuthUser;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -20,8 +21,11 @@ return Application::configure(basePath: dirname(__DIR__))
 
         ]);
 
-        $middleware->appendToGroup('roleChecherGroup',[
-            roleChecker::class,
+        $middleware->appendToGroup('isAdmin',[
+            isAdmin::class,
+        ]);
+        $middleware->appendToGroup('isAuthUser',[
+            isAuthUser::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
