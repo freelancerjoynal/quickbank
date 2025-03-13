@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ApplyForLoan extends Model
 {
     protected $fillable =[
+        'user_id',
         'full_name',
         'email',
         'phone_number',

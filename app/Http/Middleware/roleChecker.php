@@ -20,7 +20,7 @@ class RoleChecker
     {
         // Check if the authenticated user has role 1 or 2
         if (auth()->user()->role === 0) {
-            return redirect()->route('profile.dashboard');
+            return redirect()->route('my.account');
 
         }elseif  (  auth()->user()->role !== 1 && auth()->user()->role !== 2 ){
 

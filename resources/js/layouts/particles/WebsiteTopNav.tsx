@@ -47,6 +47,9 @@ export default function WebsiteTopNav() {
                                             <DropdownMenuItem>Billing</DropdownMenuItem>
                                             <DropdownMenuItem>Team</DropdownMenuItem>
                                             <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                            <DropdownMenuItem>
+                                                <Link href={route('role.logout')}>Logout</Link>
+                                            </DropdownMenuItem>
                                         </DropdownMenuContent>
                                     </DropdownMenu>
                                 </a>
