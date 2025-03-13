@@ -56,7 +56,7 @@ const LoanPage = () => {
                     {
                         auth.user ? (
                             auth.user.role === 0 ? (
-                                <Link href={route('home')}>
+                                <Link href={route('apply.loan.page')}>
                                     <Button>Apply Now</Button>
                                 </Link>
                             ) : (
