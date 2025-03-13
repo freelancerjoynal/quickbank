@@ -16,7 +16,7 @@ Route::get('/about', function () {
 })->name('website.about');
 
 // Loan Application Page Route
-Route::get('/apply-for-loan', function () {
+Route::get('/loan', function () {
     return Inertia::render('Website/LoanPage/LoanPage', []);
 })->name('website.apply.loan');
 

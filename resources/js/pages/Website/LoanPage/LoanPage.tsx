@@ -2,7 +2,7 @@ import FAQSection from '@/components/faqSection';
 import LoanCalculator from '@/components/LoanCalculator';
 import { Button } from '@/components/ui/button';
 import WebsiteLayout from '@/layouts/WebsiteLayout';
-import { Link, usePage } from '@inertiajs/react';
+import { Head, Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 
 
@@ -22,6 +22,7 @@ const LoanPage = () => {
 
     return (
         <WebsiteLayout>
+            <Head title='Loan '></Head>
             <div className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
                 <div className="bg-gradient-to-r from-black via-yellow-800 to-black pt-28 pb-16 text-white">
@@ -54,11 +55,17 @@ const LoanPage = () => {
                 <div className='min-h-64 text-center'>
                     {
                         auth.user ? (
-                            <Link>
-                                <Button>Apply Now</Button>
-                            </Link>
+                            auth.user.role === 0 ? (
+                                <Link href={route('home')}>
+                                    <Button>Apply Now</Button>
+                                </Link>
+                            ) : (
+
+                                    <Button onClick={() => alert('You are a manager, you can not apply for a loan')}>You're Manager</Button>
+
+                            )
                         ):(
-                            <Link>
+                            <Link href={route('register')}>
                                 <Button>Register</Button>
                             </Link>
                         )
